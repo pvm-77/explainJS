@@ -101,31 +101,55 @@
 </summary>
 &emsp;&emsp; [History of javascript] (#-some jkdsf)</br>
 
-</details><details>
-<summary>
-  <a href="#some-link">12. Async javascript</a>
-</summary>
-&emsp;&emsp; [History of javascript] (#-some jkdsf)</br>
+</details>
 
-</details><details>
-<summary>
-  <a href="#some-link">13. Callbacks</a>
-</summary>
-&emsp;&emsp; [History of javascript] (#-some jkdsf)</br>
+<details>
+  <summary>
+    <a href="#12-async-javascript">12. Async javascript</a>
+  </summary>
 
-</details><details>
-<summary>
-  <a href="#some-link">14. promises</a>
-</summary>
-&emsp;&emsp; [History of javascript] (#-some jkdsf)</br>
-
-</details><details>
-<summary>
-  <a href="#some-link">15. async await</a>
-</summary>
-&emsp;&emsp; [History of javascript] (#-some jkdsf)</br>
+&emsp;&emsp;[12.1 What is Asynchrony in javascript](#121-what-is-asynchrony-in-javscript)</br>
+&emsp;&emsp;[12.1 What do you mean by  synchronous code in javascript](#121-what-is-asynchrony-in-javscript)</br>
+&emsp;&emsp;[12.1 What do you mean by asynchronous code in  javascript](#121-what-is-asynchrony-in-javscript)</br>
+&emsp;&emsp;[12.1 What is the diffrence between synchrnous js and async js](#121-what-is-asynchrony-in-javscript)</br>
+&emsp;&emsp;[12.1 What is the benefit of async js compare and explain](#121-What-is-the-benefit-of-async-js-compare-and-explain)</br>
 
 </details>
+
+<details>
+  <summary>
+    <a href="#13-callbacks">13. Callbacks(2)</a>
+  </summary>
+
+&emsp;&emsp;[13.1 What is callback function](#131-what-is-callback-function)</br>
+&emsp;&emsp;[13.2 What is the drawback of callback function](#132-what-is-the-drawback-of-callback-function)</br>
+
+</details>
+
+<details>
+  <summary>
+    <a href="#14-promises">14. Promises(3)</a>
+  </summary>
+
+
+  &emsp;&emsp;[14.1 What is promise](#141-what-is-promise)</br>
+  &emsp;&emsp;[14.2 What is the drawback of promise](#142-what-is-the-drawback-of-promise)</br>
+  &emsp;&emsp;[14.3 promise methods](#143-promise-methods)</br>
+
+</details>
+
+
+<details>
+  <summary>
+    <a href="#15-async-&-await">15. Async & Await</a>
+  </summary>
+
+  &emsp;&emsp;[15.1 what is async await combination](#151-what-is-async-await-combination)</br>
+
+   &emsp;&emsp;[15.1 what is the benefit to use async await](#152-what-is-the-benefit-to-use-async-await)</br>
+
+</details>
+
 </br>
 </br>
 
@@ -805,6 +829,59 @@ alert( rabbit.eats ); // true
 <p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
 
 
+
+# `12. Async Javascript `
+
+## ![tick] 12.1 What is Asynchrony/asynchronous programming in JS
+
+"Asynchrony" or "asynchronous programming" in JavaScript refers to the ability of the code to run non-blocking operations and continue with other tasks while waiting for the results of those operations. This approach allows the code to be more efficient and responsive, especially when dealing with time-consuming or network-dependent tasks.
+
+
+📚 [**Explore: Asynchrony**](./sections/asynchrony/asynchrony.md)
+</br>
+</br>
+
+## ![tick] 12.2 What do you mean by  synchronous code in javascript
+
+In JavaScript, synchronous code refers to the code that is executed in a sequential manner, one instruction after another. This means that the code is executed in a blocking manner, i.e., the execution of the code blocks the execution of the rest of the code until the current instruction is complete.
+
+📚 [**Explore: synchronous code**](./sections/asynchrony/synccode.md)
+</br>
+</br>
+
+## ![tick] 12.3 What do you mean by  asynchronous code in javascript
+
+Asynchronous code in JavaScript allows the program to execute tasks concurrently, without blocking the execution of other tasks. This means that the program can continue to run while it waits for some operation to complete, such as fetching data from a server, reading or writing to a file, or waiting for a user input.
+
+📚 [**Explore: asynchronous code**](./sections/asynchrony/asynccode.md)
+</br>
+</br>
+
+## ![tick] 12.4 What is the diffrence between synchrnous js and async js
+
+In synchronous JavaScript, the program executes code in a single thread, where each line of code is executed one after the other, blocking the execution of other code until the current task is complete. This means that the program must wait for each task to complete before moving on to the next one.
+
+Asynchronous JavaScript allows for more efficient and responsive programs, as it enables the program to execute multiple tasks at the same time without blocking the execution of other code. However, it can also be more complex and difficult to read and write than synchronous code, due to the use of callbacks, promises, and async/await syntax.
+
+📚 [**Explore: scope**](./sections/asynchrony/difference.md)
+</br>
+</br>
+
+## ![tick] 12.5 What is the benefit of async js compare and explain
+
+asynchronous programming is an important tool for modern web development, and can help developers create faster, more responsive, and more efficient web applications. However, it can also be more complex and difficult to work with than synchronous programming, and requires a good understanding of asynchronous programming concepts and techniques.
+
+Improve performance:
+more responsive user interface
+better resource utilization
+simplified code
+compatibility with external APIs
+
+📚 [**Explore: scope**](./sections/asynchrony/)
+</br>
+</br>
+
+
 # Async javascript
 async js is all about now and later concept 
 
@@ -819,6 +896,7 @@ performing a repeatitive task atfix interval of time
 </br>
 
 <p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
+
 ## callback functions
 a callback function is a function that is passed as an argument to another function and is called by that function when a certain event occurs or a certain task is completed. Callback functions are used to allow asynchronous programming, where a task is initiated, and the program continues to run while waiting for the task to complete.
 </br>
@@ -826,6 +904,7 @@ a callback function is a function that is passed as an argument to another funct
 </br>
 
 <p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
+
 ## promise
 
 a Promise is an object that represents a value that may not be available yet but will be resolved in the future, possibly asynchronously. It is a way to handle asynchronous operations such as network requests or database queries that may take some time to complete. A Promise can be in one of three states:
@@ -901,9 +980,110 @@ Code execution continues...
 
 
 
+# `13. Callbacks `
+
+## ![tick] 13.1 What is callback function
+
+A callback function is a function that is passed as an argument to another function and is executed or called back at some point inside the outer function. The purpose of a callback function is to allow code to be executed after an operation is completed, often asynchronously. The outer function that accepts the callback function as an argument can then invoke or call the callback function at an appropriate time, passing in any necessary parameters as arguments. This allows for greater flexibility and modularity in programming, as different callback functions can be used with the same outer function to achieve different results.
+
+📚 [**Explore: callback function**](./sections/callbacks/callback.md)
+</br>
+</br>
+
+
+## ![tick] 13.2 What is the drawback of callback function
+
+While callback functions are a powerful and widely used feature in JavaScript, they have some potential drawbacks that can make them hard to work with in certain situations. Here are some of the drawbacks of callback functions:
+
+Callback hell: When using multiple nested callbacks, the code can quickly become hard to read and maintain, leading to a problem called "callback hell". 
+getData(function(data) {
+  getMoreData(data, function(moreData) {
+    getEvenMoreData(moreData, function(evenMoreData) {
+      // ...
+    });
+  });
+});
+Error handling: When an error occurs in a callback function, it can be difficult to handle it properly, especially when there are multiple nested callbacks. Errors can also be easily missed or ignored, leading to unexpected behavior. For example:
+getData(function(data) {
+  // ...
+}, function(error) {
+  // ...
+});
+Lack of composition: It can be difficult to compose and combine callback functions, especially when they have different argument and return types. This can make it hard to write modular and reusable code.
+
+Difficulty in managing asynchronous operations: Callback functions can be difficult to use for managing complex asynchronous operations, such as handling multiple requests in parallel, chaining requests together, or handling errors and retries.
+
+📚 [**Explore: drawbacks of callback**](./sections/callbacks/drawbackcallback.md)
+</br>
+</br>
+<p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
+
+
+
+# `14. Promises `
+
+## ![tick] 14.1 What is promise
+
+In JavaScript, a promise is an object representing the eventual completion or failure of an asynchronous operation and its resulting value.
+
+
+
+📚 [**Explore: promise**](./sections/)
+</br>
+</br>
+
+
+## ![tick] 14.2 What is the drawback of promise
+
+While promises provide a powerful and flexible way to handle asynchronous operations in JavaScript, they also have some drawbacks that can make them challenging to work with in certain situations. Here are a few potential drawbacks of using promises in JavaScript.
+
+1. `No cancellation support`: Promises are designed to represent the eventual outcome of an asynchronous operation and do not support cancellation. Once a promise is created, it will eventually either be fulfilled or rejected, and there's no way to cancel the operation midway through.
+
+2. `Error handling can be tricky`: While promises make it easy to handle asynchronous errors using their catch() method, they can also be tricky to work with when you have multiple promises chained together. It's easy to accidentally swallow errors or end up with unhandled rejections if you're not careful.
+
+3. `Not all APIs are promise-based`: While many modern JavaScript APIs and libraries use promises, not all of them do. This can lead to awkward situations where you need to convert between promises and other async patterns, such as callbacks or event emitters.
+
+4. `Debugging can be challenging`: Because promises are designed to be used with asynchronous operations, they can be challenging to debug when something goes wrong. Errors that occur inside a promise chain can be difficult to trace back to their source, especially if the chain is long and complex.
+
+Despite these drawbacks, promises remain one of the most powerful and widely used tools for handling asynchronous operations in JavaScript. With a little care and attention, they can be an excellent way to write clean, maintainable, and robust code
+
+📚 [**Explore: promise drawbacks**](./sections/promise/drawbackpromise.md)
+</br>
+</br>
+
+## ![tick] 14.3 promise methods
+text
+
+📚 [**Explore: promise methods**](./sections/)
+</br>
+</br>
+<p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
+
+
+# `15. Async Await `
+
+## ![tick] 15.1 what is async await combination
+
+text
+
+📚 [**Explore: async await combination**](./sections/)
+</br>
+</br>
+
+
+## ![tick] 15.2 what is the benefit to use async await
+text
+📚 [**Explore: benefit async await**](./sections/)
+</br>
+</br>
+
+<p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
+
 
 
 ## async and await 
+
+
 </br>
 </br>
 </br>
