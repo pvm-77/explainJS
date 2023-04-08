@@ -170,6 +170,37 @@ In conclusion, JavaScript is a powerful and versatile programming language that 
 
 [**Read More:what is javascript**](./sections)
 
+## ![tick] javascript data types 
+
+In JavaScript, a data type refers to the type or category of a value that can be stored in a variable or passed as an argument to a function. Every value in JavaScript has a data type, which determines the type of operations that can be performed on that value and how that value is stored and processed by the JavaScript engine.
+
+JavaScript has two main categories of data types: primitive data types and non-primitive data types. Primitive data types are the most basic data types, and they include number, string, boolean, null, undefined, and symbol. Non-primitive data types, also known as reference types, are more complex data types, and they include objects, arrays, functions, and others.
+
+The data type of a value in JavaScript is automatically determined by the JavaScript engine based on the value itself. For example, if a value is a number, its data type is number. If a value is a string, its data type is string. Developers can also explicitly define the data type of a variable or value using type conversion functions or by explicitly assigning a value to a variable with a specific data type.
+
+Understanding data types is an important aspect of programming in JavaScript, as it affects how values are stored and processed, and can impact the performance and behavior of a program.
+
+Primitive Data Types:
+
+Number: Represents numeric values, including integers and floating-point numbers.
+BigInt: Represents integers with arbitrary precision.
+Boolean: Represents a logical value of either true or false.
+String: Represents a sequence of characters.
+Symbol: Represents a unique identifier that is not equal to any other value.
+
+Non-Primitive Data Types:
+
+Object: Represents a collection of properties and methods.
+Array: Represents an ordered list of values.
+Map: Represents a collection of key-value pairs.
+Set: Represents a collection of unique values.
+Function: Represents a block of code that can be called and executed.
+Date: Represents a date and time value.
+RegExp: Represents a regular expression object used for pattern matching.
+Error: Represents an error object containing information about an error that occurred during execution.
+Promise: Represents a promise for a value that may not be available yet.
+Proxy: Represents a proxy object that can intercept and customize operations performed on another object.
+It's worth noting that although there are many data types in JavaScript, all of them are ultimately derived from the primitive data types. For example, objects, arrays, and functions are built upon the primitive data types, and their behavior is determined by the underlying primitive data types they are built upon.
 
 
 

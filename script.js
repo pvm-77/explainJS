@@ -111,12 +111,19 @@
 // yes boss
 // function, createAudioFileAsync(), which asynchronously generates a sound file given a configuration record and two callback functions: one called if the audio file is successfully created, and the other called if an error occurs.
 
-function successCallback(result){
-    console.log(`Audio file ready at URL: ${result}`);
-}
+// function successCallback(result){
+//     console.log(`Audio file ready at URL: ${result}`);
+// }
 
-function failureCallback(error){
-    console.error(`Error generating audio file: ${error}`);
-}
+// function failureCallback(error){
+//     console.error(`Error generating audio file: ${error}`);
+// }
 
-createAudioFileAsync(audioSettings,successCallback,failureCallback);
+// createAudioFileAsync(audioSettings,successCallback,failureCallback);
+
+
+
+const anyString='universe'
+console.log(anyString);
+anyString[0]="u";
+console.log(anyString)
