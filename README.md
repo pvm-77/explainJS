@@ -222,6 +222,46 @@ Overall, let and const provide more granular control over variable scope and hel
 
 ## ![tick] 2.1 types of variables?
 
+Let's compare and contrast the features of let, var, and const in JavaScript:
+Scope:
+
+var: var variables are function-scoped. They are accessible within the function they are declared in, as well as within nested functions. If declared outside of any function, they become global variables.
+let and const: Both let and const variables are block-scoped. They are limited to the block (enclosed within curly braces) they are defined in, such as within an if statement, for loop, or function block.
+Hoisting:
+
+var: var variables are hoisted to the top of their scope during the compilation phase. This means you can access var variables before they are declared, but they will have the value undefined until assigned.
+let and const: Unlike var, let and const variables are not hoisted. They are not accessible before their declaration, resulting in a ReferenceError if accessed prematurely.
+Reassignment:
+
+var and let: Both var and let variables can be reassigned with new values within their scope.
+const: const variables are read-only and cannot be reassigned once they are assigned a value. However, for objects and arrays, the properties or elements within the object or array can still be modified.
+Temporal Dead Zone (TDZ):
+
+let and const: let and const variables have a TDZ, which is a period before their declaration in which they cannot be accessed. Accessing them during the TDZ results in a ReferenceError.
+Use Cases:
+
+var: var variables are commonly used when you need variables with function scope or when you intentionally want variables to be hoisted.
+let: let variables are recommended when you need block scope and the ability to reassign values.
+const: const variables are useful when you want to declare variables with a constant value that should not be reassigned.
+Redeclaration:
+
+var: var allows for redeclaration of a variable within the same scope. This can lead to potential bugs and variable shadowing issues.
+let and const: Both let and const do not allow redeclaration of a variable within the same scope. Attempting to redeclare a let or const variable will result in a SyntaxError.
+Function-level scoping:
+
+var: var variables are function-scoped, meaning they are accessible throughout the entire function they are declared in, regardless of block scopes within that function.
+let and const: Both let and const variables are block-scoped, meaning they are limited to the block they are defined in. They are not accessible outside of the block, including within nested blocks.
+Initialization:
+
+var and let: var and let variables can be declared without being immediately initialized. They will have the value undefined until they are assigned a value.
+const: const variables must be initialized with a value at the time of declaration. They cannot be declared without an initial value.
+Performance considerations:
+
+let and const: let and const variables offer better performance optimizations compared to var in certain scenarios, such as in loops. This is because let and const variables have block scope, allowing them to be optimized more effectively by the JavaScript engine.
+Global object property:
+
+var: var variables declared in the global scope become properties of the global object (window object in browsers or global object in Node.js).
+let and const: let and const variables declared in the global scope do not become properties of the global object. They remain confined to the global scope.
 
 
 # `3. Scope `
