@@ -16,13 +16,14 @@
 
 <details>
   <summary>
-    <a href="#1-introduction">1. Introduction (3)</a>
+    <a href="#1-introduction">1. Introduction (5)</a>
   </summary>
 
   &emsp;&emsp;[1.1 what is javascript](#-11-what-is-javascript)</br>
   &emsp;&emsp;[1.2 Use Of javascript](#-12-use-of-javascript)</br>
   &emsp;&emsp;[1.3 History of javascript](#-13-history-of-javascript)</br>
-  &emsp;&emsp;[1.4 javascript data types](#-14-javascript-data-types)
+  &emsp;&emsp;[1.4 javascript data types](#-14-javascript-data-types)</br>
+  &emsp;&emsp;[1.5 type grammer ](#-15-type-grammer)
 
 </details>
 
@@ -202,6 +203,53 @@ Promise: Represents a promise for a value that may not be available yet.
 Proxy: Represents a proxy object that can intercept and customize operations performed on another object.
 It's worth noting that although there are many data types in JavaScript, all of them are ultimately derived from the primitive data types. For example, objects, arrays, and functions are built upon the primitive data types, and their behavior is determined by the underlying primitive data types they are built upon.
 
+## type grammer
+
+### primitive behaviour
+### 1.1 Primitive immmutibility:
+  all primitive value are immutable it means you cant change the contents of primitive 
+  -- reassingment possible ,new value also create but original value remain intact
+
+  The nature of primitive values being immutable is not affected in any way by how the variable or object property holding the value is declared. For example, whether const, let, or var are used to declare the greeting variable above, the string value it holds is immutable.
+
+const doesn't create immutable values, it declares variables that cannot be reassigned (aka, immutable assignments) -- see the "Scope & Closures" title of this series for more information.
+
+### primitive with properties
+properties can not added to primitives but property access is allowed
+except null and undefined
+- non nullish primitives have some built in methods says toString(),valueOf()
+- coerscion behavior k/a autoboxing can explain these 
+### primitive assignments
+
+any assignment of values from one to another is value copy each of these own copy of value
+
+## string behaviour
+
+### 1.string character access
+string can follow style to get access of characters means by index help we can access characteres
+if index not number it will try to coerce to number 
+if index not in 0- length-1 or NaN or not a number value type the access will treated as property accss with string property equivalnrt name;
+if property access fail result is undefined
+### string comparison[equality and relational ordering]
+
+comparison are sensitive to actual string contents underlying code codepoints non BPM unicode characters
+- equality abd relational operation are case sensitive;
+
+### String Equality
+=== or == operators alogn with negation != or !== 
+
+
+### string concatenation 
+2 or more values can be easily cconcatenated by + operator
+if one is string other will coerce to string even if empty thinks wd work
+other option for concatenation is concat and join method
+
+
+### string value methods
+charAt() at() charCodeAt() codePointAt() substr()/substring()/slice()
+concat() indexOf inludes() search() trim() split() and others
+
+  
 
 
 # `2. Variables`
