@@ -1,9 +1,277 @@
+// story of var keyword
+
+const e = require("cors");
+
+
+// QUESTIONS
+
+
+// function foo(){
+//     // console.log(t);
+
+
+//     // var t=5
+//     var t;
+//     console.log(t);
+
+//     t=5;
+// }
+// foo()    //5
+
+
+
+
+
+// for(var i=0;i<3;i++){
+//     setTimeout(()=>{
+//         console.log(i)  //2 2 2
+//     },100)
+// }
+// for (var a of [1, 2, 3]);
+// console.log(a)
+// var x=10;
+
+
+// var x = 10;
+// if (true) {
+//   var x = 20;
+// }
+// console.log(x);
+// var x = 5;
+// function foo() {
+//   console.log(x);
+//   var x = 10;
+// }
+// foo();
+
+// var x = 5;
+// function foo() {
+//   console.log(x);
+// }
+// foo();
+
+
+
+
+// if (true) {
+//   var x = 2;
+//   console.log(x);
+// }
+// console.log(x);
+
+// var x=5;
+// function foo(){
+//     console.log(x)
+//     var x=10;
+// } //10
+
+
+// 5. 
+// var x=5
+// function foo(){
+//     console.log(x)
+// }
+// foo()    //5
+// var x=67
+// function ft(){
+//     var x=5;
+   
+//     console.log(x)
+
+// }
+// ft()
+// console.log(x)
+
+
+
+// 10.
+// function foo() {
+//   var x = 5;
+// }
+// foo();
+// console.log(x);
+
+
+// var x = 5;
+// if (true) {
+//   var x = 10;
+//   console.log(x);
+// }
+// console.log(x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(typeof(z))
+
+
+
+
+
+
+// SCOPE function scope or global
+// var defualt value undefined
+// var x=1
+
+// if (x==1) {
+//     var x=2;
+//     console.log(x)
+
+// }
+// console.log(x)
+
+// function foo(){
+//     var x=1;
+//     function bar(){
+//         var y=2;
+//         console.log(x); // f bar closes over x
+//         console.log(y); //it is in scope
+//     }
+//     bar();
+//     console.log(x);
+//     console.log(y); //reference effor
+// }
+// foo()
+// block contrusts bloack stetment try catch switch one for statemennt
+
+// for(var a of [1,2,3]);
+// console.log(`value of a`,a)
+
+// var is hoisted only declaration hoisted not initialization
+// bla=2
+// var bla;
+// console.log(bla)
+
+
+// REDECLARATION
+// var a=1
+// var a=2
+// console.log(a)
+// var a;
+// console.log(a)
+
+// basis to explain var
+
+// SCOPE 
+
+
+// REDECLARARTION INITIALIZATION HOISTING ASSIGNMENT[RE]
+
+
+
+
+
+
+
+
+
+
+
+
+// let variable declaration 
+
+// {
+
+//     // tdz at begining of scope
+//     console.log(bar);
+//     console.log(foo);
+//     var bar=2;
+//     let foo=5
+// }
+
+
+
+// find output on let based questions
+
+// 1.
+// let x = 5;
+// function foo() {
+//   let x = 10;
+//   return x;
+// }
+// let y = foo();
+// console.log(y)
+// 9
+// let x=5
+// if(true){
+//     let x=10;
+//     console.log(x)
+// }
+// console.log(x)
+
+// let x = 5;
+// function foo() {
+//   let x = 10;
+//   return x;
+// }
+// console.log(x);
+
+// let x = 5;
+// if (true) {
+//   let x = 10;
+// }
+// console.log(x);
+// let x = 1;
+// if (true) {
+//   let x = 2;
+//   console.log(x);
+// }
+// console.log(x);
+// let x = 5;
+// function foo() {
+//   console.log(x);
+// }
+// foo();
+
+// let x = 5;
+// function foo() {
+//   console.log(x);
+//   let x = 10;
+// }
+// foo();
+
+// let x = 10;
+// if (true) {
+//   let x = 20;
+// }
+// console.log(x);
+
+// for (let i = 0; i < 3; i++) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, 100);
+//   }
+  
+
+// function foo() {
+//     console.log(x);
+//     let x = 5;
+//   }
+//   foo();
+  
+let x = 5;
+function foo() {
+  console.log(x);
+}
+foo();
+
+
+
 // const promise = new Promise((resolve, reject) => {
 //     // Simulate an asynchronous operation that takes 3 seconds
 //     setTimeout(() => {
 //     //   const result = Math.random();
 //     let r=2
-  
+
 //       if (r >= 0.5) {
 //         // Resolve the Promise with the result if it's greater than or equal to 0.5
 //         resolve(r);
@@ -13,13 +281,13 @@
 //       }
 //     }, 3000);
 //   });
-  
+
 //   promise.then((result) => {
 //     console.log('The Promise was fulfilled with the result:', result);
 //   }).catch((error) => {
 //     console.error('The Promise was rejected with the error:', error);
 //   });
-  
+
 
 
 // const promises=[Promise.reject('i am rejecting'),Promise.resolve('i am resolving'),Promise.resolve(1)]
@@ -123,7 +391,7 @@
 
 
 
-const anyString='universe'
-console.log(anyString);
-anyString[0]="u";
-console.log(anyString)
+// const anyString = 'universe'
+// console.log(anyString);
+// anyString[0] = "u";
+// console.log(anyString)
