@@ -39,11 +39,109 @@ let a; // a can pe initialize
 console.log(a)
 
 
-var and let comparison
-let declarations are scoped to blocks as well as functions.
-let declarations can only be accessed after the line of declaration is reached (see temporal dead zone). For this reason, let declarations are commonly regarded as non-hoisted.
-let declarations do not create properties on globalThis when declared at the top level of a script.
-let declarations cannot be redeclared by any other declaration in the same scope.
-let begins declarations, not statements. That means you cannot use a lone let declaration as the body of a block (which makes sense, since there's no way to access the variable).
-Note that let is allowed as an identifier name when declared with var or function in non-strict mode, but you should avoid using let as an identifier name to prevent unexpected syntax ambiguities.
-A let declaration within a function's body cannot have the same name as a parameter. A let declaration within a catch block cannot have the same name as the catch-bound identifier.
+
+similarity of let and const
+
+SCOPE: block and function
+HOISTING: both non hoisted;
+GLOBALThis property :not created by both
+REDECLARTION: no
+Begins declarations not statement 
+true cant use lone let or const 
+
+
+NOTE :declaration  and statement in js
+STATEMENT:
+a statement in js is a comple unit of codethat perform
+an action or execute a specific task
+each statement typically end with semicolon 
+statement can simple or compound
+
+example of simple statement
+let x = 10; // Assignment statement
+console.log("Hello, world!"); // Function call statement
+return; // Return statement
+
+example of compound (block ) statement
+if (condition) {
+  // Code block
+  // Multiple statements can be grouped together in a block
+  statement1;
+  statement2;
+  // ...
+}
+
+
+
+DECLARATion : a declaration in js is used 
+to introduce a new varible constant 
+function class
+or import/export binding to the current scope. 
+it declares a name and optionally assigns a value or defines 
+the function's body
+
+Example of variable declaration:
+let age; // Declaration of a variable 'age'
+const pi = 3.14; // Declaration of a constant 'pi' with an initial value
+
+
+Example of function declaration:
+function add(a, b) {
+  return a + b;
+}
+example of class declaration
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+example of import /export declaration
+// In a module (file):
+export const pi = 3.14;
+import { pi } from './constants';
+
+
+
+const in object and arrays
+
+
+In JavaScript, a closure is a function that retains 
+access to variables from its outer (enclosing) scope 
+even after the outer function has finished executing. 
+This means that the inner function "closes over" its 
+surrounding environment, 
+capturing the values of the variables at the time of its creation.
+
+In simpler terms, a closure allows a function to remember
+ and access variables from its parent function, even if 
+ that parent function has already completed its execution. 
+ This behavior is particularly useful for creating private variables
+ and maintaining state in functional programming.
+
+// disadvantages of closure
+
+// 1. memory consumption
+// 2.performance overhead 3.complexity and maintenance
+// 4. security concerns
+// memory retention
+// hard to garbage collect
+//  context traps
+// maintenance and scope management
+
+
+Data Encapsulation: Closures allow you to create private variables and functions. By defining variables within a function's scope, they cannot be accessed or modified from outside the function. This helps in data encapsulation, preventing accidental interference with critical data.
+
+Stateful Functions: Closures enable functions to maintain and access their own unique state. You can create functions that remember previous invocations and use the stored data for future calls. This is particularly useful when dealing with event handlers or asynchronous operations.
+
+Callbacks and Asynchronous Operations: Closures are commonly used in asynchronous programming and event handling. They allow you to capture the current state and context of a function so that it can be executed correctly when an event or callback occurs.
+
+Function Factories: Closures can be used to create function factories, meaning you can create and return specialized functions with predefined behavior based on the environment in which they were created. This promotes code reusability and modularity.
+
+Currying: Closure-based currying allows you to create new functions by partially applying arguments to an existing function. This technique can be useful for creating reusable functions with varying behavior based on the provided arguments.
+
+Memory Efficiency: Closures can optimize memory usage by allowing functions to retain access to shared variables instead of creating new copies of those variables each time the function is called.
+
+Modular Programming: Closures facilitate modular programming by allowing you to define self-contained units of behavior that can be used independently or combined with other parts of your application.
+
+While closures can offer these benefits, it's essential to use them judiciously and be mindful of potential memory leaks, as retaining references to variables can lead to increased memory consumption if not managed properly.

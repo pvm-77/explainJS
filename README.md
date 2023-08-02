@@ -271,12 +271,7 @@ Overall, let and const provide more granular control over variable scope and hel
 ## ![tick] 2.1 different kind  of variable declaration?
 
 ### let var and const
-In JavaScript, there are multiple ways to declare variables, each with its own characteristics. Here's a brief summary of the different variable declaration methods in JavaScript:
-1. `var`:The `var` keyword was the original way to declare variables in JavaScript. Variables declared with `var` are function-scoped, meaning they are accessible within the function where they are declared or, if not within a function, they become global variables. `var` declarations are hoisted to the top of their scope, which means you can access them before they are declared. However, they do not have block scope and can be redeclared and reassigned.
-2. `let`: Introduced in ECMAScript 6 (ES6), the `let` keyword allows you to declare block-scoped variables. Block scope means the variable is only accessible within the block (a set of curly braces) where it is declared or nested blocks within it. Unlike `var`, `let` variables are not hoisted, so you cannot access them before their declaration. `let` variables can be reassigned but cannot be redeclared within the same scope.
-3. `const`: Also introduced in ES6, the `const` keyword is used to declare block-scoped variables that are meant to be constants, i.e., their value cannot be reassigned after initialization. Like `let`, `const` variables are block-scoped and not hoisted. They must be assigned a value when declared and cannot be redeclared or reassigned within the same scope.
 
-It's important to choose the appropriate variable declaration method based on your needs. Generally, it is recommended to use `let` and `const` for better control over variable scoping and to avoid unintentional reassignments, while minimizing the use of `var`.
 
 Let's compare and contrast the features of let, var, and const in JavaScript:
 
@@ -483,8 +478,10 @@ closure is javascript feature that allows a function to **access** variables fro
 
 ## why do we need closure?
 they provide a way to create and maintain private data and functions
+In summary, closures are crucial for data encapsulation, managing state, working with asynchronous operations, creating reusable function factories, and maintaining context for event handlers and callbacks. They enable more flexible and organized JavaScript code compared to not using closures.
 
 ## with closure without closure?
+
 ## benefit of closure
 ## disadvantages of closure
 
