@@ -135,6 +135,59 @@ In simpler terms, a closure allows a function to remember
 
 
 
+# Object [copy operation ]
+
+1. Explain the difference between deep copy and shallow copy in JavaScript.
+
+shallow copy me new object bnta hai lekin jo nested property hoti hn unka reference bhi copy ho jata h hai actual me vo copy naho hote
+
+
+
+
+2. How would you create a shallow copy of an array in JavaScript?
+1.spread operator 2. spread operator 3 from method
+
+
+Could you provide an example of when using a shallow copy might not produce the expected results?
+
+
+1. What are some methods to perform a deep copy of an object in JavaScript?
+Discuss the pros and cons of using the JSON.parse() and JSON.stringify() methods for deep copying an object.
+1. If you want to create a deep copy of an object containing functions, how would you go about it?
+5.Explain the concept of circular references and how they can impact deep copying.
+Can you compare using libraries like Lodash for deep copying versus implementing your own solution?
+When might you choose to use a shallow copy instead of a deep copy?
+Describe a scenario where you might need to combine shallow and deep copying within a nested data structure.
+
+
+
+
+const originalObject = { name: 'sarfaraz', age: 23, hobbies: ['sleeip', 'eat'] };
+
+
+
+const shalloWCopy = { ...originalObject };
+
+
+
+// shallow copy of an array tech
+
+const recipe = [
+    "Chocolate Cake",
+    ["Flour", "Sugar", "Cocoa Powder"],
+    "Preheat the oven to 350°F.",
+    ["Eggs", "Butter", "Milk"],
+    "Bake for 25-30 minutes."
+];
+
+const copyRecipe=Array.from(recipe);
+// const copyRecipe=recipe.slice();same work like array from method:which is shallow copy
+// const copyRecipe=[...recipe];same work like array from method:which is shallow copy
+copyRecipe[0]="vanilla cake"
+copyRecipe[1][0]="aata";
+
+console.log('original recipe',recipe);
+console.log('duplicate recipe',copyRecipe)
 
 
 
