@@ -1,0 +1,18 @@
+
+
+
+# note about function 
+
+## function in javascript
+
+
+
+
+function are first class citizen in javascript language meaning 
+
+they can be pass as variables retrun from other function and so on thats why 
+
+
+
+# what do you mean by First-class function 
+a programming 

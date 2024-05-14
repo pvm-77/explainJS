@@ -1,0 +1,107 @@
+
+
+
+
+basics of objects
+
+
+configuration of object properties
+
+
+What is Callback hell ?
+Explain promises in JavaScript ?
+Difference between observable and a promise
+How to create custom events in JavaScript ?
+Difference between prototype and _proto_ ?
+Explain prototypal inheritance in JavaScript ?
+Difference between for in and for of loop ?
+Difference between get and post methods ?
+Difference between post and put methods ?
+When we pass an object to a function are they passed by reference or by value ?
+What are the design patterns in JavaScript ?
+What do u understand by the terms mutable and immutable in JavaScript ?
+What is Async and Await in JavaScript ?
+Is array a data type ?
+How can we overwrite any JavaScript inbuilt property (like array.push())
+Explain exception handling in JavaScript ?
+Difference between a transpiler and a compiler ?
+How to apply conditional breakpoints in chrome browser debugging tool ?
+How to check if a number is an integer without using math function and without converting number into string or array ?
+Use of JavaScript clearInterval() ?
+How to define a private method or variable inside a class in JavaScript or ES6 ?
+Can arrow functions be used as constructor functions ?
+What is Map in JavaScript ?
+How to implement authentication in a website ?
+How would you implement pagination using JavaScript ?
+Difference between a browser tab and a window in context of localstorage and sessionstorage ?
+What is oauth in context of jwt ?
+What is nginx used for ?
+How to change the redirection URLs after the build has been made ?
+What is a JWT , what are it's parts and what is its use ?
+What are ‘set’ in javascript ?
+Do we have reverse() method on javascript string ?
+Name some array methods in JavaScript ?
+Which operation is faster among == and === ?
+Why storing JWT in cookie is safer than storing JWT in session storage or local storage? Is storing in cookie 100 percent safe ? what if I copy JWT from cookie in the browser debug panel and use it in a CSRF attack ?
+Explain Array's sort method for sorting numbers. What is the time complexity of this method ?
+What is quick sort and what is it's time complexity ?
+Write a code to flatten the contents of an object ?
+What is Micro frontend architecture ?
+What is the difference between first class function and higher order function ?   
+What is temporal dead zone ?
+What is the seal method in JavaScript ?
+What is functional programming in JavaScript ?
+Difference between put and patch method in javascript ?
+What is a REST API ?
+How to convert an object to an Array in JavaScript ?
+How to deep clone in JavaScript ?
+How to flatten an array in JavaScript ?
+What is debounce in JavaScript ?
+What is memoization in JavaScript ?
+How to write a function ‘Sum’ such that on calling sum(a)(b)(c)....() where a,b,c etc are numbers , the output will be a+b+c+....(function calls with parameters) ?
+What will be the output of the below code:
+let obj ={
+
+a: 10,
+
+vir : function() {
+
+x();
+
+console.log(this.a);
+
+function x(){
+
+आगे पढ़ने के लिए सुझाव
+
+Top 100 Javascript Interview Questions & Answers -…
+Besant technologies velachery  9 महीने पहले
+
+Four simple ways to Reverse a String in JavaScript
+Oluchukwu Okpala  4 वर्ष पहले
+
+Mastering JavaScript A Challenge with 50 Essential…
+JavaScript Developer Freelancer  2 महीने पहले
+console.log(this.a)
+
+}
+
+}
+
+}
+
+obj.vir();
+
+
+Source:- JavaScript Interview Questions For 3 Years Of Experience
+
+For more questions and answers visit our website at  Frontend Interview Questions
+
+
+# higher order function and first class function
+pass a call in a function that is HOF and when we trat function as variable then  firt class citixen
+
+
+# operations on objects 
+
+copy the objects 
