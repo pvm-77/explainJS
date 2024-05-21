@@ -56,11 +56,17 @@ there are so many operators that we can use in day to day coding
 some of the operators are as follows
 
 ## assignment operators 
+
 ## comparison operators 
+
 ## arithmetic 
+
 ## bitwise 
+
 ## logical 
+
 ## bigint
+
 stirng 
 ternary 
 comma 

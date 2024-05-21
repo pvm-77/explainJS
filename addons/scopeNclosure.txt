@@ -1,0 +1,169 @@
+what is scope 
+what is lexical scope meaning what is scope chaining 
+
+pretty basic understand
+
+
+
+so why a scope is a mendatory concept things to understand
+
+ina program it is wondor how varibles are stores and then later how can we use them in program 
+
+there must be sometging to that we can work smoothly 
+
+
+soo for this purpose we setup some rules we can say them as scope
+
+
+
+basically it is aconcept where we observe can we can access the varible in the region or in part of the 
+program where we calling/using that variable
+
+here varible meaning u can thing of brod sense like simple variable object function and those basic things
+
+
+
+
+
+
+
+# important notes about closure
+
+1. Question to think - how do varible live /where they are stored 
+2. question - how does our program find them when it needs them
+
+these quesions speak  to the need for a wel defined set of rules for storing varibales in some location 
+and for findin those varibale at a later time we call those set of rules scope
+
+where and how those scope rules gets set? imp.
+
+# scope definition
+what is actually scope is 
+a weel defined set of rules for storing variables in some location and for 
+finding those variables at a later time we call that set of rules scope
+
+# how these scope rules gets set?
+let a program statement var a=2;
+step are follows as below
+1. tokenizing/lexing
+2. parsing: ast tree
+3. code generation : executable code
+
+
+
+
+# understanding scope
+
+1.engine
+2. compiler
+3. scope  :another friend of Engine;
+ collects and maintains a look-up list of all the declared identifiers (variables), and enforces a strict set of rules as to how these are accessible to currently executing code.
+
+
+# nested scope
+just as a block or function is nested inside another block or function 
+scopes are nested othe scopes 
+if a variable cannot be found in the immediate scope engine consult 
+the next outer containing scope 
+continuing until outer most [global] this is what scope chain is
+
+
+
+
+
+# Errors
+lhs and rhs looks behave dirrently in if  a variable not declared
+
+ReferenceError is Scope resolution-failure related, whereas TypeError implies that Scope resolution was successful, but that there was an illegal/impossible action attempted against the result.
+
+
+
+
+
+
+# lexical scope
+scope models lexical scope and dynamic scope
+
+To define it somewhat circularly, lexical scope is scope that is defined at lexing time. In other words, lexical scope is based on where variables and blocks of scope are authored, by you, at write time, and thus is (mostly) set in stone by the time the lexer processes your code.
+
+
+
+The same identifier name can be specified at multiple layers of nested scope, 
+Regardless of shadowing, scope look-up always starts at the innermost scope being executed at the time, and works its way outward/upward until the first match, and stops
+
+chapter 2 summary
+Lexical scope means that scope is defined by author-time decisions of where functions are declared. The lexing phase of compilation is essentially able to know where and how all identifiers are declared, and thus predict how they will be looked-up during execution.
+
+Two mechanisms in JavaScript can "cheat" lexical scope: eval(..) and with. The former can modify existing lexical scope (at runtime) by evaluating a string of "code" which has one or more declarations in it. The latter essentially creates a whole new lexical scope (again, at runtime) by treating an object reference as a "scope" and that object's properties as scoped identifiers.
+
+The downside to these mechanisms is that it defeats the Engine's ability to perform compile-time optimizations regarding scope look-up, because the Engine has to assume pessimistically that such optimizations will be invalid. Code will run slower as a result of using either feature. Don't use them
+
+
+# chapter 3 function vs block scope
+
+hiding in plane scope principa of least privilege
+
+
+
+
+# second ediiton
+There are three program characteristics you can observe to prove this to yourself: syntax errors, early errors, and hoisting
+proove that js in 2 phase
+
+
+# final revision scope and closure from 2 edition
+
+#chapter1 
+
+- working with varible and storing them is most fundamental 
+thing
+
+2 phase of js 
+1. compling/parsing
+2. execution
+The code author's decisions on where to place variables, functions, and blocks with respect to each other are analyzed according to the rules of scope, during the initial parsing/compilation phase.
+The resulting scope structure is generally unaffected by runtime conditions
+
+
+
+JS functions are themselves first-class values; they can be assigned and passed around just like numbers or strings. But since these functions hold and access variables, they maintain their original scope no matter where in the program the functions are eventually executed. This is called closure
+
+Modules are a code organization pattern characterized by public methods that have privileged access (via closure) to hidden variables and functions in the internal scope of the module
+
+While the JS specification does not require "compilation" explicitly, it requires behavior that is essentially only practical with a compile-then-execute approach.
+
+There are three program characteristics you can observe to prove this to yourself: syntax errors, early errors, and hoisting.
+
+1.stntax errors from the starts
+
+
+
+How do you know if a variable is a target? Check if there is a value that is being assigned to it; if so, it's a target. If not, then the variable is a source.
+
+For the JS engine to properly handle a program's variables, it must first label each occurrence of a variable as target or source. We'll dig in now to how each role is determined.
+
+compilation creates a map of all the lexical scopes that lays out what the program will need while it executes. You can think of this plan as inserted code for use at runtime, which defines all the scopes (aka, "lexical environments") and registers all the identifiers (variables) for each scope.
+
+In other words, while scopes are identified during compilation, they're not actually created until runtime, each time a scope needs to run
+
+
+
+
+
+
+
+
+
+
+# shadowing
+
+
+# uninitialized variables aka TDZ temporal dead zone
+    with var declarations the variable is hoisted
+    to the top of its scope but it also initialized
+    to the undefined value so tht the varibale variable can be 
+    used throug out the entire scope
+    but let and const are not same in this respect
+
+- let and const dont auto-initilize at the top of the scope
+- prove that let and const do hoist ()
