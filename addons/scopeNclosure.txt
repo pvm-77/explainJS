@@ -39,7 +39,7 @@ where and how those scope rules gets set? imp.
 
 # scope definition
 what is actually scope is 
-a weel defined set of rules for storing variables in some location and for 
+a well defined set of rules for storing variables in some location and for 
 finding those variables at a later time we call that set of rules scope
 
 # how these scope rules gets set?
@@ -167,3 +167,46 @@ In other words, while scopes are identified during compilation, they're not actu
 
 - let and const dont auto-initilize at the top of the scope
 - prove that let and const do hoist ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# closures 
+
+
+understanding scope and apply in closure
+- closure is the behaviour of fnction only
+why closure 
+ becz if code structure ans code orgaization improve
+
+ application of closure from functioanl programming
+ 1.partia application 
+ 2. currying
+
+ For closure to be observed, a function must be invoked, and specifically it must be invoked in a different branch of the scope chain from where it was originally defined.
+
+A function executing in the same scope it was defined would not exhibit any observably different behavior with or without closure being possible; by the observational perspective and definition, that is not closure.
+
+$$$ inner function always closure over variable not the value;
+Closure is observed when a function uses variable(s) from outer scope(s) even while running in a scope where those variable(s) wouldn't be accessible.
+
+The key parts of this definition are:
+
+Must be a function involved
+
+Must reference at least one variable from an outer scope
+
+Must be invoked in a different branch of the scope chain from the variable(s)

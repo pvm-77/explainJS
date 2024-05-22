@@ -216,11 +216,143 @@ The ReferenceError here technically comes from greeting = "Howdy" accessing the 
 
 // prove that let and const do hoist IMP
 
-var studentName='scriptsar'; //Global scope
-{
-    console.log(studentName);// local scope
+// var studentName='scriptsar'; //Global scope
+// {
+//     console.log(studentName);// local scope
 
 
-    let studentName='suzy';
-    console.log(studentName)
+//     let studentName='suzy';
+//     console.log(studentName)
+// }
+
+// closures
+
+
+// ###############################################################################
+// outer/global scope: RED(1)
+
+// function lookupStudent(studentID) {
+//     // function scope: BLUE(2)
+
+//     var students = [
+//         { id: 14, name: "Kyle" },
+//         { id: 73, name: "Suzy" },
+//         { id: 112, name: "Frank" },
+//         { id: 6, name: "Sarah" }
+//     ];
+
+//     return function greetStudent(greeting){
+//         // function scope: GREEN(3)
+
+//         var student = students.find(
+//             student => student.id == studentID
+//         );
+
+//         return `${ greeting }, ${ student.name }!`;
+//     };
+// }
+
+// var chosenStudents = [
+//     lookupStudent(6),
+//     lookupStudent(112)
+// ];
+
+// // accessing the function's name:
+
+// console.log(chosenStudents[0].name)
+// // greetStudent
+
+// chosenStudents[0]("Hello");
+// // Hello, Sarah!
+
+// chosenStudents[1]("Howdy");
+// Howdy, Frank!
+
+
+// function adder(num1){
+
+//     return function addTo(num2){
+//         return num1+num2;
+//     }
+// }
+
+// var add10To=adder(10);
+// console.log(add10To(1))
+// console.log(add10To(1))
+// console.log(add10To(1))
+
+// example where close over variable updated
+// function makeCounter(count){
+   
+//     return function gerCurrent(){
+    
+//         return count++;
+//     }
+// }
+// var hits=makeCounter(10)
+// console.log(hits())
+// console.log(hits())
+// console.log(hits())
+
+
+// function defineHandler(requestUrl,requestData) {
+//     return function makeRequesr(evt) {
+//         ajax(requestUrl,requestData)
+        
+//     }
+    
+// }
+// function setupButtinHandler(params) {
+//     var recordKind=btn.dataset.kind;
+//     var handler=defineHandler(ApiendPoiunts[recordKind],data[recordKind]);
+//     btn.addEventListener('click',handler)
+    
+// }
+
+// var hits
+// {
+//     let count=0;
+//     hits=function getCurrent(){
+//         count=count+1;
+//         return count;
+//     }
+// }
+// console.log(hits())
+// console.log(hits())
+// console.log(hits())
+
+
+
+// var studentName='frank';
+// var greeting=function hello(){
+//     console.log(`hello , ${studentName}`);
+// }
+
+// studentName='suzy'
+// console.log(greeting())
+
+
+// var keeps=[];
+// for(var i=0;i<3;i++){
+
+//     keeps[i]=function keepI() {
+//         //
+//         return i;
+//     }
+// }
+
+// console.log(keeps[0]());
+
+function say(myName) {
+    var greeting = "Hello";
+    output();
+
+    function output() {
+        console.log(
+            `${ greeting }, ${ myName }!`
+        );
+    }
 }
+
+say("Kyle");
+// Hello, Kyle!
