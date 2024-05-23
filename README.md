@@ -470,7 +470,7 @@ In JavaScript, shadowing occurs when a variable declared in an inner scope has t
 
 <p align="right"><a href="#table-of-contents">⬆ Return to top</a></p>
 
-# `4. Closure`
+# `4. Closure or lexical closure or function closure`
 (links 1) https://www.freecodecamp.org/news/lets-learn-javascript-closures-66feb44f6a44/
 
 ## what is closure?[function closure]
@@ -481,6 +481,18 @@ closure is javascript feature that allows a function to **access** variables fro
 a closure allows a function to remember and access variables from its parent function, even if that parent function has already completed its execution.
 **OR**
 a closure is created when an inner function "closes over" (captures) variables from its outer function, allowing the inner function to retain access to those variables even after the outer function has finished executing and u can update or whatever those variables.
+
+**OR** 
+
+closure is observed when a function uses variables from outer scope even while running in a scope where those variable  woudnot be accesible;
+
+3 important point to notice 
+- must be a function involved
+- must reference at leat one variable from an outer scope
+- must invoke in different branch of the scope chain from the variables;
+
++
+
 
 ## why do we need closure?
 they provide a way to create and maintain private data and functions
