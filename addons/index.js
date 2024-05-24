@@ -521,8 +521,8 @@ say("Kyle");
 // Hello, Kyle!
 
 
-All function invocations can access global variables, 
-regardless of whether closure is supported by the language or not. Global variables don't need to be closed over
+// All function invocations can access global variables, 
+// regardless of whether closure is supported by the language or not. Global variables don't need to be closed over
 var students = [
     { id: 14, name: "Kyle" },
     { id: 73, name: "Suzy" },
