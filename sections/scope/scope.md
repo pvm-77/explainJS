@@ -5,7 +5,124 @@
 
 ## explain scope in detail
 In JavaScript, scope refers to the area of a program where a particular variable or function is accessible. It determines the visibility and lifetime of variables and functions within a program. The scope of a variable or function is defined by where it is declared in the code, and it can be either local or global.
+<!-- new additional notes -->
 
+1. **scope**: it is the set of rules that determines where and how a variable(identifier) can be look-up 
+2. look-up may be for the purpose of assigning a value to the variable or when passing arguments for function parameter AKA (LHS reference).
+   
+```js
+// simple assignment 
+var x=10;  
+
+// function parameter
+function greet(name){ // LHS reference to name, assigning argument passed during function call
+  console.log(`heelo ${name}`)
+
+}
+greet('alice'); // Assigns "Alice" to the parameter name
+```
+3. look-up may be for retriving a value of the variable AKA (RHS  reference) [commonly happen in function call or expressions]
+
+```js
+// simple retrieval
+var x = 10;
+console.log(x);  // RHS reference to x, retrieving its value 10
+
+
+// using in expressions
+var a = 5;
+var b = a + 2;  // RHS reference to a, retrieving its value 5
+console.log(b);  // Outputs 7
+
+
+```
+
+
+4. when an RHS reference is unfullfilled a `ReferenceError` is thrown because the variable is not found.
+```js
+// RHS ReferenceError
+// RHS reference to an undeclared variable
+try {
+    console.log(nonExistentVar);  // ReferenceError: nonExistentVar is not defined
+} catch (e) {
+    console.log(e.message);  // Output: nonExistentVar is not defined
+}
+
+```
+```js
+// unfullfilled RHS referece ;
+
+// Trying to access a configuration setting
+
+    console.log(configSetting);  // ReferenceError: configSetting is not defined
+```
+5. in non-strict mode an unfullfilled reference results in implicitly created global variable.
+
+```js
+// LHS Unfulfilled Reference in Non-Strict Mode
+// Non-strict mode by default
+function assignGlobal() {
+    // LHS reference to an undeclared variable
+    implicitlyGlobalVar = 42;  // Creates a global variable
+}
+
+assignGlobal();
+console.log(implicitlyGlobalVar);  // Output: 42
+
+
+```
+```js
+// Non-strict mode by default
+function setUserPreferences() {
+    // LHS reference to an undeclared variable
+    userPreference = "dark mode";  // Creates a global variable
+}
+
+// Simulate setting user preferences
+setUserPreferences();
+console.log(userPreference);  // Output: dark mode
+
+```
+
+6. in strict mode and unfullfiled LHS referecnce throws a `ReferenceError` because the variable cannot be created implicitly
+
+```js
+// LHS Unfulfilled Reference in Strict Mode
+"use strict";
+
+function assignGlobalStrict() {
+    // LHS reference to an undeclared variable
+    try {
+        implicitlyGlobalVar = 42;  // ReferenceError: implicitlyGlobalVar is not defined
+    } catch (e) {
+        console.log(e.message);  // Output: implicitlyGlobalVar is not defined
+    }
+}
+
+assignGlobalStrict();
+// console.log(implicitlyGlobalVar);  // This line would also throw a ReferenceError if uncommented
+
+```
+```js
+
+// In strict mode, an unfulfilled LHS reference throws a ReferenceError because the variable cannot be implicitly created.
+"use strict";
+
+function setUserPreferencesStrict() {
+    try {
+        // LHS reference to an undeclared variable
+        userPreference = "dark mode";  // ReferenceError: userPreference is not defined
+    } catch (e) {
+        console.log("Error:", e.message);  // Output: Error: userPreference is not defined
+    }
+}
+
+// Simulate setting user preferences
+setUserPreferencesStrict();
+// The following line would also throw a ReferenceError if uncommented
+// console.log(userPreference);
+
+```
 
 </br>
 </br>
@@ -20,7 +137,7 @@ Global scope, on the other hand, is created when a variable or function is decla
 Another important concept related to scope is the use of the var, let, and const keywords. var is used to declare variables in global or local scope, but its scope can be confusing due to its hoisting behavior. let and const, on the other hand, are block-scoped, meaning that they are only accessible within the block where they are declared (such as a function, loop, or conditional statement).
 
 
-```js
+<!-- ```js
 
 // Problem: We need to fetch data from a server and display it on a web page. We also need to provide a way for the user to filter the data by category.
 
@@ -102,19 +219,13 @@ function renderCategories() {
 
 // Call the fetchData function to start the application
 fetchData();
-```
-
-### some common naming convention to distinguish global and local variables
-
- here are some common variable naming conventions that can help to distinguish between global and local variables:
+``` -->
 
 
-1. Prefix global variables with `g_` or `global_`. For example, `global_count `or `g_total`.
+# NOTE:
+1. Use const or let to declare local variables whenever possible, as they have block scope and are less prone to unintentional reassignment or shadowing.
 
-2. Use descriptive names for local variables that reflect their purpose within the current scope. For example, `userCount` or `productPrice`.
-
-3. Use const or let to declare local variables whenever possible, as they have block scope and are less prone to unintentional reassignment or shadowing.
-Avoid reusing variable names within the same scope, and use unique names that clearly describe their purpose.
+2. Avoid reusing variable names within the same scope, and use unique names that clearly describe their purpose.
 
 
 
@@ -133,3 +244,8 @@ in JavaScript, a lexical environment is a concept that describes the scope in wh
     Reference to the outer lexical environment: This is a reference to the lexical environment of the outer (enclosing) function, which allows for nested functions to have access to the variables and functions of the outer function.
 
 The lexical environment is created at the time when a function is defined and depends on the location of that function in the source code. When the function is called, a new execution context is created, which includes a reference to the lexical environment of the function.
+
+Scope look-up stops once it finds the first match. The same identifier name can be specified at multiple layers of nested scope, which is called "shadowing" (the inner identifier "shadows" the outer identifier). Regardless of shadowing, scope look-up always starts at the innermost scope being executed at the time, and works its way outward/upward until the first match, and stops.
+
+# some practice questions based on scope concept
+
