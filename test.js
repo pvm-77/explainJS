@@ -1,17 +1,11 @@
-let number=100;
+let index;
+console.log(i)
 
-function change(number) {
-    number=number*10;
-   
+
+for ( index = 0; index < 3; index++) {
+   const log=()=>{
+    console.log(index);
+   }
+   setTimeout(log, 100);
     
 }
-change(number);
-
-console.log(number);
-
-
-
-
-
-
-
