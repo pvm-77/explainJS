@@ -59,4 +59,12 @@ console.log(t);   // Output: 20, instead of 10 because the let variable has been
 ```
 
 
+## global shadow global 
+
+
+when we write a variable in global scope and it uses let or const it will shadow the global object property of the same name while it is not the case with var 
+why it is a bad practice?
+
+
+
 ## benfit of understanding 

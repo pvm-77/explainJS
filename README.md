@@ -473,6 +473,51 @@ In JavaScript, shadowing occurs when a variable declared in an inner scope has t
 # `4. Closure or lexical closure or function closure`
 (links 1) https://www.freecodecamp.org/news/lets-learn-javascript-closures-66feb44f6a44/
 
+## motivation for function closure
+
+for security stand point principal of least exposure it suggest a defensive appproach to software 
+architecture in which system has to be designed to function with leat privilege least exposure and least access if each component is connected with minimum necasary capbaility 
+overall system is stronger from security stand point bcz comporimise or failure in one part has 
+minimized impact on the system
+polp - focus on system level component design
+pole- focuses on lower level well apply it to how scope interact with each other
+
+In following POLE, what do we want to minimize the exposure of? Simply: the variables registered in each scope.
+
+
+Think of it this way: why shouldn't you just place all the variables of your program out in the global scope? That probably immediately feels like a bad idea, but it's worth considering why that is. When variables used by one part of the program are exposed to another part of the program, via scope, there are three main hazards that often arise:
+
+1. NAMING COLLISIONS:
+2. UNEXPECTED BEHAVIOR:
+3. UNINTENDED DEPENDENCY:
+  
+POLE, as applied to variable/function scoping, essentially says, default to exposing the bare minimum necessary, keeping everything else as private as possible. Declare variables in as small and deeply nested of scopes as possible, rather than placing everything in the global (or even outer function) scope.
+
+If you design your software accordingly, you have a much greater chance of avoiding (or at least minimizing) these three hazards.
+
+CHECK THIS OUT FOR MORE CLARITY OF ABOVE THOUGHTS
+```js
+function diff(x,y) {
+    if (x > y) {
+        let tmp = x;
+        x = y;
+        y = tmp;
+    }
+
+    return y - x;
+}
+
+diff(3,7);      // 4
+diff(7,5);      // 2
+
+```
+In this diff(..) function, we want to ensure that y is greater than or equal to x, so that when we subtract (y - x), the result is 0 or larger. If x is initially larger (the result would be negative!), we swap x and y using a tmp variable, to keep the result positive.
+
+In this simple example, it doesn't seem to matter whether tmp is inside the if block or whether it belongs at the function level—it certainly shouldn't be a global variable! However, following the POLE principle, tmp should be as hidden in scope as possible. So we block scope tmp (using let) to the if block.****
+
+
+
+
 ## what is closure?[function closure]
 closure is javascript feature that allows a function to **access** variables from an outer (enclosing) function even after function has finished executing .
 **OR**
@@ -526,6 +571,124 @@ In summary, closures are crucial for data encapsulation, managing state, working
 8. **maintenance and scope management**
 
 📚[**Explore: disadvantages of closure**](./sections/closure/disadvantages.md)
+
+
+## common misconception around closure
+
+1. inner function closes over value of variable in outer scope not the variable itself
+```js
+var keeps=[];
+for(var i=0;i<3;i++){
+
+  keeps[i]=function keepI(){
+    //closure over i
+    return i;
+  }
+}
+keeps[0]();   // 3 -- WHY!?
+keeps[1]();   // 3
+keeps[2]();   // 3
+// answer 0 1 2 will be misconcetion because var i value has been updated and final value be 3 which will be reassign to i because it is in the scope
+
+```
+
+
+2. invoking a function that make use of lexical scope lookup
+```js
+
+function say(myName) {
+    var greeting = "Hello";
+    output();
+
+    function output() {
+        console.log(
+            `${ greeting }, ${ myName }!`
+        );
+    }
+}
+
+say("Kyle");
+// Hello, Kyle!
+
+   ```
+3. global scope variables essentially cannot be (observably) closed over, because they're always accessible from everywhere. No function can ever be invoked in any part of the scope chain that is not a descendant of the global scope.
+```js
+var students = [
+    { id: 14, name: "Kyle" },
+    { id: 73, name: "Suzy" },
+    { id: 112, name: "Frank" },
+    { id: 6, name: "Sarah" }
+];
+
+function getFirstStudent() {
+    return function firstStudent(){
+        return students[0].name;
+    };
+}
+
+var student = getFirstStudent();
+
+student();
+// Kyle
+```
+   
+
+4. Variables that are merely present but never accessed don't result in closure
+```js
+function lookupStudent(studentID) {
+    return function nobody(){
+        var msg = "Nobody's here yet.";
+        console.log(msg);
+    };
+}
+
+var student = lookupStudent(112);
+
+student();
+// Nobody's here yet.
+
+```
+
+
+5. If there's no function invocation, closure can't be observed
+```js
+function greetStudent(studentName) {
+    return function greeting(){
+        console.log(
+            `Hello, ${ studentName }!`
+        );
+    };
+}
+
+greetStudent("Kyle");
+
+// nothing else happens
+```
+
+
+6. Though the enclosing scope of a closure is typically from a function, that's not actually required; there only needs to be an inner function present inside an outer scope
+```js
+// ****************************** START FILE********************************************
+var hits{
+  // an outer scope (but not a function)
+  let count=0;
+
+  hits=function getCurrent(){
+    count=count+1;
+    return count;
+  }
+}
+hits()
+hits()
+hits()
+
+// ******************************END FILE
+
+```
+   
+
+
+
 </br>
 </br>
 
