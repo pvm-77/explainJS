@@ -460,7 +460,8 @@ Scope chaining refers to the process by which JavaScript searches for a variable
 
 ## ![tick] 3.4 What is shadowing?
 
-In JavaScript, shadowing occurs when a variable declared in an inner scope has the same name as a variable declared in an outer scope. This can cause confusion and unexpected behavior if the two variables are not intended to be separate.
+**DEFINITION** : when a variable declared within a certain scope [like function scope or block scope] has a same name as variable declared in an outer scope.The inner variable "shadows" or "hides" the outer variable within the scope it is defined.
+**example** :
 
 
 📚[**Explore: shadowing**](./sections/scope/shadowing.md)

@@ -7,7 +7,7 @@
 //     console.log(index);
 //    }
 //    setTimeout(log, 100);
-    
+
 // }
 
 // Non-Memoized Recursive Factorial
@@ -15,60 +15,114 @@
 //    if (n <= 1) return 1;
 //    return n * factorial(n - 1);
 //  }
- 
+
 //  // Memoized Recursive Factorial
 //  function memoizedFactorial() {
 //    const cache = {};
- 
+
 //    return function factorial(n) {
 //      if (n <= 1) return 1;
 //      if (cache[n]) return cache[n];
 //      return cache[n] = n * factorial(n - 1);
 //    }
 //  }
- 
+
 //  const factorialMemo = memoizedFactorial();
- 
+
 //  // Test and measure performance
 //  const testValue = 20; // Example test value, adjust as needed
- 
+
 //  // Non-Memoized performance
 //  console.time("Non-Memoized Factorial");
 //  console.log(factorial(testValue));
 //  console.timeEnd("Non-Memoized Factorial");
- 
+
 //  // Memoized performance
 //  console.time("Memoized Factorial");
 //  console.log(factorialMemo(testValue));
 //  console.timeEnd("Memoized Factorial");
- 
 
 
 
 
-var APIendpoints = {
-   studentIDs:
-       "https://some.api/register-students",
-   // ..
-};
 
-var data = {
-   studentIDs: [ 14, 73, 112, 6 ],
-   // ..
-};
+// var APIendpoints = {
+//    studentIDs:
+//        "https://some.api/register-students",
+//    // ..
+// };
+
+// var data = {
+//    studentIDs: [ 14, 73, 112, 6 ],
+//    // ..
+// };
 
 
-function makeRequest(evt){
-   var btn=evt.target;
-   var recordKind=btn.dataset.kind;
-   ajax(APIendpoints[recordKind],data[recordKind])
+// function makeRequest(evt){
+//    var btn=evt.target;
+//    var recordKind=btn.dataset.kind;
+//    ajax(APIendpoints[recordKind],data[recordKind])
+// }
+
+// // <button data-kind="studentIDs">
+// //    Register Students
+// // </button>
+// btn.addEventListener("click",makeRequest);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// shadowing
+// // window.sample='i am the sample string';
+// global.sample='i am the sample string in the nodejs environment'
+// console.log(sample)
+
+// var special=42
+// function lookingFor(special) {
+
+//    function keepLooking() {
+//       var special=3.22;
+//       console.log(special)
+//       console.log(window.special)
+
+//    }
+//    keepLooking()
+
+// }
+// lookingFor(11234)
+
+// copying is not accessing
+
+// var special=42;
+// function lookingFor(special) {
+
+//    var another={
+//       special:special,
+//    }
+//    function keepLooking(){
+//       var special=3.14;
+//       console.log(special)
+//       console.log(another.special)
+//       console.log(window.special)
+//    }
+
+// }
+
+// lookingFor()
+
+var askQuestion = function ofTheTeacher() {
+   console.log(ofTheTeacher)
 }
-
-// <button data-kind="studentIDs">
-//    Register Students
-// </button>
-btn.addEventListener("click",makeRequest);
-
-
-
-
+askQuestion()
+console.log(askQuestion)
