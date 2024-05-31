@@ -121,8 +121,99 @@
 
 // lookingFor()
 
-var askQuestion = function ofTheTeacher() {
-   console.log(ofTheTeacher)
+// var askQuestion = function ofTheTeacher() {
+//    console.log(ofTheTeacher)
+// }
+// askQuestion()
+// console.log(askQuestion)
+
+;   // => ???
+; // => ???
+
+// question 6
+// console.log(0.1 + 0.2 === 0.3)
+
+// // Question 7
+
+// // console.log(myVar)
+// // console.log(myConst)
+
+// var myVar = 'value';
+// const myConst = 3.14;
+
+// stack overflow 
+// let number = 100
+ 
+// function change(number) {
+//    // shadowing of outer number here
+//     number = number * 10;  //1000
+// }
+ 
+// change(number);
+ 
+// console.log(number);
+
+
+// console.log(studentName)   //ReferenceError: Cannot access 'studentName' before initialization
+
+// let studentName='scriptsar';
+
+// studentName='scriptsar';
+// console.log(studentName);  //ReferenceError: Cannot access 'studentName' before initialization
+// let studentName;
+
+// how do we initilize an uninitialize variable for let/const
+// only way is assignnment attached to a declaration 
+// let studentName=undefined;
+// console.log(typeof studentName)
+
+// var student
+// console.log(typeof student)
+
+// // var student=undefined
+// // console.log(typeof student)
+
+
+// hositing based questions 
+console.log('bar:',bar); //undefined
+
+bar=16;
+var foo=1;
+console.log('foo:',foo,'bar:',bar); //1 16
+var bar;
+
+// q2
+greetings();
+
+var greetings=function () {
+    console.log('first greetings');
+    
 }
-askQuestion()
-console.log(askQuestion)
+greetings();
+
+function greetings() {
+    console.log('second greeting');
+    
+}
+greetings()
+// q3
+// var variable=10;
+// (()=>{
+// console.log(variable);
+// variable=20;
+// console.log(variable)
+// })();
+
+// q4
+var variable =10;
+(()=>{
+    variable_3=35;
+    console.log(variable_3);
+    var variable_3=45;
+    variable_2=15;
+    console.log(variable)
+})()
+console.log(variable_2)
+console.log(variable_3)
+var variable=30;
+
