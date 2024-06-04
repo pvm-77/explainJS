@@ -134,14 +134,14 @@ Again, the only reasonable explanation is that the code must first be fully pars
 
 // hoisting
 
-function saySomething(){
-    var greeting='Hello';
-    {
-        greeting="Howdy"; 
-        let greeting='Hi';
-        console.log(greeting);
-    }
-}
+// function saySomething(){
+//     var greeting='Hello';
+//     {
+//         greeting="Howdy"; 
+//         let greeting='Hi';
+//         console.log(greeting);
+//     }
+// }
 // saySomething()
 //// ReferenceError: Cannot access 'greeting' before
 // initialization
@@ -343,85 +343,85 @@ The ReferenceError here technically comes from greeting = "Howdy" accessing the 
 
 // console.log(keeps[0]());
 
-function say(myName) {
-    var greeting = "Hello";
-    output();
+// function say(myName) {
+//     var greeting = "Hello";
+//     output();
 
-    function output() {
-        console.log(
-            `${ greeting }, ${ myName }!`
-        );
-    }
-}
+//     function output() {
+//         console.log(
+//             `${ greeting }, ${ myName }!`
+//         );
+//     }
+// }
 
-say("Kyle");
+// say("Kyle");
 // Hello, Kyle!
 
 
 
 // basic closure examples
 // 1. remembering  A secret
-function createSecretHolder(secret){
+// function createSecretHolder(secret){
 
-    return function secretHolder(){
+//     return function secretHolder(){
 
-        console.log('the secret is :',secret);
+//         console.log('the secret is :',secret);
 
 
 
-    }
-}
-var secretMessage=createSecretHolder('dont tell anyone');
-secretMessage()
+//     }
+// }
+// var secretMessage=createSecretHolder('dont tell anyone');
+// secretMessage()
 
 
 
 // simulating a remember me feature
 
-function createRememberMe(username){
-    let isLoggedIn=false;
+// function createRememberMe(username){
+//     let isLoggedIn=false;
 
-    return function checkLogin(){
+//     return function checkLogin(){
 
-        if (!isLoggedIn) {
-            console.log(`welcome back ${username} !`)
-            isLoggedIn=true;
+//         if (!isLoggedIn) {
+//             console.log(`welcome back ${username} !`)
+//             isLoggedIn=true;
             
-        } else {
-            console.log('you are already logged in ');
-        }
+//         } else {
+//             console.log('you are already logged in ');
+//         }
 
 
-    }
-}
+//     }
+// }
 
 
-var rememberAlice=createRememberMe('Alice');
-rememberAlice()
-rememberAlice()
+// var rememberAlice=createRememberMe('Alice');
+// rememberAlice()
+// rememberAlice()
 
 
 
 // remembering selected language using closure concept
 
-function createLanguageSwitcher(){
-    let selectedLanguage='en';
+// function createLanguageSwitcher(){
+//     let selectedLanguage='en';
 
 
-    return function switchLanguage(newLanguage){
-        selectedLanguage=newLanguage
-        return{
-            selectedLanguage:newLanguage,
-            message:   `Language changed to : ${selectedLanguage}`
-        }
+//     return function switchLanguage(newLanguage){
+//         selectedLanguage=newLanguage
+//         return{
+//             selectedLanguage:newLanguage,
+//             message:   `Language changed to : ${selectedLanguage}`
+//         }
 
-    }
-}
+//     }
+// }
 
-const languageSwitcher=createLanguageSwitcher();
-// Example usage (can be used to update DOM or other logic)
-const languageInfo = languageSwitcher("fr");
-console.log(languageInfo.message); // Output: Language changed to: fr
+// const languageSwitcher=createLanguageSwitcher();
+// // Example usage (can be used to update DOM or other logic)
+// const languageInfo = languageSwitcher("fr");
+// console.log(languageInfo.message); // Output: Language changed to: fr
 
 
 
@@ -433,19 +433,19 @@ console.log(languageInfo.message); // Output: Language changed to: fr
 
 // customizable greeting using closure
 
-function greeting(name){
-    let greeting='hello'
-    return function personalizeGreeting(){ 
-        console.log(`${greeting} ${name} !`)
-    }
-}
+// function greeting(name){
+//     let greeting='hello'
+//     return function personalizeGreeting(){ 
+//         console.log(`${greeting} ${name} !`)
+//     }
+// }
 
-const morningAnnouncer = greet("Alice");
-morningAnnouncer(); // Output: Hello, Alice!
+// const morningAnnouncer = greet("Alice");
+// morningAnnouncer(); // Output: Hello, Alice!
 
-greeting = "Good Evening"; // Modify greeting for future closures
-const eveningAnnouncer = greet("Bob");
-eveningAnnouncer(); // Output: Good Evening, Bob!
+// greeting = "Good Evening"; // Modify greeting for future closures
+// const eveningAnnouncer = greet("Bob");
+// eveningAnnouncer(); // Output: Good Evening, Bob!
 
 
 // common closures AJax and events
@@ -468,17 +468,17 @@ eveningAnnouncer(); // Output: Good Evening, Bob!
 
 
 // second closure use
-function listenForClicks(btn,label){
+// function listenForClicks(btn,label){
 
 
-    btn.addEventListener('click',function onClick(){
-        console.log(`the ${button} was clicked`)
-    })
-}
+//     btn.addEventListener('click',function onClick(){
+//         console.log(`the ${button} was clicked`)
+//     })
+// }
 
-var submitBtn = document.getElementById("submit-btn");
+// var submitBtn = document.getElementById("submit-btn");
 
-listenForClicks(submitBtn,"Checkout");
+// listenForClicks(submitBtn,"Checkout");
 
 
 
@@ -486,57 +486,66 @@ listenForClicks(submitBtn,"Checkout");
 
 
 // 1. if there is no function invocation closure cant be observed
-function greetStudent(studentName){
+// function greetStudent(studentName){
 
-    return function greeting(){
-        console.log(`hello ${studentName}`);
-    }
+//     return function greeting(){
+//         console.log(`hello ${studentName}`);
+//     }
 
-}
+// }
 // if outer variable are not accessed
-function lookupStudent(studentID) {
-    return function nobody(){
-        var msg = "Nobody's here yet.";
-        console.log(msg);
-    };
-}
+// function lookupStudent(studentID) {
+//     return function nobody(){
+//         var msg = "Nobody's here yet.";
+//         console.log(msg);
+//     };
+// }
 
-var student = lookupStudent(112);
+// var student = lookupStudent(112);
 
-student();
+// student();
 // Nobody's here yet.
 // 3 invoking a function that makes use of lexical scope lookup no clpsure here
-function say(myName) {
-    var greeting = "Hello";
-    output();
+// function say(myName) {
+//     var greeting = "Hello";
+//     output();
 
-    function output() {
-        console.log(
-            `${ greeting }, ${ myName }!`
-        );
-    }
+//     function output() {
+//         console.log(
+//             `${ greeting }, ${ myName }!`
+//         );
+//     }
+// }
+
+// say("Kyle");
+// // Hello, Kyle!
+
+
+// // All function invocations can access global variables, 
+// // regardless of whether closure is supported by the language or not. Global variables don't need to be closed over
+// var students = [
+//     { id: 14, name: "Kyle" },
+//     { id: 73, name: "Suzy" },
+//     { id: 112, name: "Frank" },
+//     { id: 6, name: "Sarah" }
+// ];
+
+// function getFirstStudent() {
+//     return function firstStudent(){
+//         return students[0].name;
+//     };
+// }
+
+// var student = getFirstStudent();
+
+// student();
+// // Kyle
+
+
+var name=function g(){
+    console.log('hi')
 }
 
-say("Kyle");
-// Hello, Kyle!
+console.log(typeof g)
 
 
-// All function invocations can access global variables, 
-// regardless of whether closure is supported by the language or not. Global variables don't need to be closed over
-var students = [
-    { id: 14, name: "Kyle" },
-    { id: 73, name: "Suzy" },
-    { id: 112, name: "Frank" },
-    { id: 6, name: "Sarah" }
-];
-
-function getFirstStudent() {
-    return function firstStudent(){
-        return students[0].name;
-    };
-}
-
-var student = getFirstStudent();
-
-student();
-// Kyle
