@@ -183,19 +183,19 @@ console.log('foo:',foo,'bar:',bar); //1 16
 var bar;
 
 // q2
-greetings();
+// greetings();
 
-var greetings=function () {
-    console.log('first greetings');
+// var greetings=function () {
+//     console.log('first greetings');
     
-}
-greetings();
+// }
+// greetings();
 
-function greetings() {
-    console.log('second greeting');
+// function greetings() {
+//     console.log('second greeting');
     
-}
-greetings()
+// }
+// greetings()
 // q3
 // var variable=10;
 // (()=>{
@@ -205,15 +205,53 @@ greetings()
 // })();
 
 // q4
-var variable =10;
-(()=>{
-    variable_3=35;
-    console.log(variable_3);
-    var variable_3=45;
-    variable_2=15;
-    console.log(variable)
-})()
-console.log(variable_2)
-console.log(variable_3)
-var variable=30;
+// var variable =10;
+// (()=>{
+//     variable_3=35;
+//     console.log(variable_3);
+//     var variable_3=45;
+//     variable_2=15;
+//     console.log(variable)
+// })()
+// console.log(variable_2)
+// console.log(variable_3)
+// var variable=30;
 
+navigator.getBattery().then((battery) => {
+    function updateAllBatteryInfo() {
+      updateChargeInfo();
+      updateLevelInfo();
+      updateChargingInfo();
+      updateDischargingInfo();
+    }
+    updateAllBatteryInfo();
+  
+    battery.addEventListener("chargingchange", () => {
+      updateChargeInfo();
+    });
+    function updateChargeInfo() {
+      console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
+    }
+  
+    battery.addEventListener("levelchange", () => {
+      updateLevelInfo();
+    });
+    function updateLevelInfo() {
+      console.log(`Battery level: ${battery.level * 100}%`);
+    }
+  
+    battery.addEventListener("chargingtimechange", () => {
+      updateChargingInfo();
+    });
+    function updateChargingInfo() {
+      console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+    }
+  
+    battery.addEventListener("dischargingtimechange", () => {
+      updateDischargingInfo();
+    });
+    function updateDischargingInfo() {
+      console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+    }
+  });
+  
