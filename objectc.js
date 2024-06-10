@@ -1,32 +1,8 @@
 
-// // cretate objects 
-
-// // METHOD 1: using object literal
-// const user={
-//     name:'scriptsar',
-//     url:'somexyz.com',
-// }
-// console.log(user);
-
-// // METHOD 2: using new key word
-
-// const person=new Object();
-// person.name='samplename';
-// person.age=33;
-// console.log(person);
-// // METHOD 3: Define an object constructor, and thencreate objects of the constructed type
-
-// function Person(name,age){
-
-//     this.name=name;
-//     this.age=age;
 
 
-// }
 
 
-// const p1=new Person('akjf','skfjhsd');
-// console.log(p1)
 
 // METHOD 3: Create an object using Object.create()  but a already existed object needed as the prototype
 
@@ -72,33 +48,6 @@
 
 
 
-// const o={
-//     a:10,
-//     vir:function(){
-//         x();
-//         console.log(this.a);
-
-//         function x() {
-//             console.log(this.a);
-
-//         }
-
-//     }
-// }
-// o.vir();
-
-
-
-// jof 
-
-// function multiple(i){
-//     return i*i;
-// }
-
-
-// function squres() {
-
-// }
 
 
 
@@ -108,18 +57,6 @@
 
 
 
-
-
-
-// const a={
-//     'full name':'sfzx',
-//     65456.6456:'21'
-// }
-
-
-// console.log(a[65456.6456]);
-// console.log(typeof a.(65456.6456))
-// // console.log(a.full name)
 
 
 
