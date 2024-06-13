@@ -1503,4 +1503,150 @@ allSettled, call, apply, bind, map, reduce, filter, forEach, flat, fetch API)
 
 🔧 Working of JS Engine
 
+https://www.linkedin.com/posts/mohd-aman_this-js-interview-question-explores-variable-activity-7193829491213807616-gcuE/
+var foo=1
 
+(function (){
+    console.log(foo)
+    foo=2;
+    console.log(foo)
+    var foo=3
+    console.log(window.foo)
+})()
+
+
+
+
+
+
+
+
+
+https://www.testgorilla.com/blog/advanced-javascript-interview-questions/?utm_term=&utm_campaign=PerformanceMax%20IN&utm_source=google&utm_medium=cpc&hsa_acc=4932434860&hsa_cam=14325551646&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwjqWzBhAqEiwAQmtgT_RvGoVNBFbofs0Ds0juUbOSpqrZ4dfpah_8UsokmnbtlN_cNwcsWxoCcmIQAvD_BwE&gad_source=1
+1. Please tell me what equality means in JavaScript.
+
+2. Can you explain what IIFEs refer to in JavaScript?
+
+3. Please explain what the bind() function does in JavaScript.
+
+4. Could you tell us the difference between const and Object.freeze() in JavaScript?
+
+5. Please explain what generators are in JavaScript.
+
+6. Can you explain what hoisting is in JavaScript?
+
+7. Please explain what the prototype design pattern does in JavaScript.
+
+8. Could you tell me what the temporal dead zone is in ES6?
+
+9. What is the primary difference between map() and forEach()?
+
+10. Please explain the difference between null and undefined variables.
+
+11. Can you tell me the difference between WeakMap and ES6 maps?
+
+12. Please explain whether JavaScript is a pass-by-value or pass-by-reference language.
+
+13. Please tell me your best advanced JavaScript soft skill.
+
+14. Please tell us your best advanced technical JavaScript skill.
+
+15. Could you tell us what closures do in JavaScript?
+
+16. Can you tell us what the close() function does in JavaScript?
+
+17. Please tell us what imports are in JavaScript.
+
+18. Please tell us what exports are in JavaScript.
+
+19. Can you explain the use of strict JavaScript directives?
+
+20. Please explain what typecasting means in JavaScript.
+
+21. Please tell us the main primitive data types in JavaScript.
+
+22. Could you tell us what you know about the different pop-up boxes in JavaScript?
+
+23. Can you explain what event bubbling means in JavaScript?
+
+24. Please explain the key differences between the ES5 function and ES6 class constructors.
+
+https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/#javascript-interview-questions-for-experienced
+
+
+https://www.linkedin.com/pulse/top-5-javascript-interview-questions-sde-deshaw-sharpener-tech/?trackingId=b47A4WCNQ0WhUIf%2BJa1%2FvA%3D%3D
+
+
+
+https://www.linkedin.com/pulse/tricky-javascript-interview-questions-part-ii-amit-pal/
+
+
+
+https://www.greatfrontend.com/questions/quiz/explain-event-delegation?fpr=yangshun
+
+
+
+https://interviewing.io/linkedin-interview-questions
+
+
+Here are top 40 Javascript questions that are frequently asked in Frontend interviews -
+
+𝟭-𝟭𝟬: 𝗕𝗮𝘀𝗶𝗰𝘀 𝗼𝗳 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁
+
+1. What is JavaScript?
+2. Explain the difference between let, const, and var.
+3. How does hoisting work in JavaScript?
+4. Describe the concept of closures.
+5. Explain the event loop in JavaScript.
+6. What is the difference between == and ===?
+7. How do you check the type of a variable in JavaScript?
+8. What is the use of the this keyword in JavaScript?
+9. Explain the difference between function declaration and function expression.
+10. How does the setTimeout function work?
+
+𝟭𝟭-𝟮𝟬: 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀 𝗮𝗻𝗱 𝗦𝗰𝗼𝗽𝗲
+
+11. What is a callback function?
+12. Explain the concept of a pure function.
+13. Describe the differences between function.call, function.apply, and function.bind.
+14. What is the purpose of the arguments object in a function?
+15. How do you create a closure in JavaScript?
+16. What is the use of the bind method?
+17. What is the difference between a shallow copy and a deep copy?
+18. How does the call stack work in JavaScript?
+19. Explain the concept of function currying.
+20. How can you avoid callback hell in JavaScript?
+
+𝟮𝟭-𝟯𝟬: 𝗢𝗯𝗷𝗲𝗰𝘁𝘀 𝗮𝗻𝗱 𝗣𝗿𝗼𝘁𝗼𝘁𝘆𝗽𝗲𝘀
+
+21. What is prototypal inheritance?
+22. How do you create an object in JavaScript?
+23. What is the purpose of the prototype property in JavaScript?
+24. Explain the difference between Object.create and the constructor pattern.
+25. How do you add a property to an object in JavaScript?
+26. What is the hasOwnProperty method used for?
+27. How can you prevent modification of object properties in JavaScript?
+28. Describe the use of the new keyword.
+29. Explain the concept of Object Destructuring in JavaScript.
+30. What is the difference between null and undefined?
+
+𝟯𝟭-𝟰𝟬: 𝗗𝗢𝗠 𝗠𝗮𝗻𝗶𝗽𝘂𝗹𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗘𝘃𝗲𝗻𝘁𝘀
+
+31. What is the DOM?
+32. How do you select elements with Vanilla JavaScript?
+33. Explain event delegation in JavaScript.
+34. What is the purpose of the addEventListener method?
+35. How do you create and remove elements in the DOM?
+36. Explain the concept of event propagation.
+37. How can you prevent the default behaviour of an event?
+38. What is the purpose of the data- attribute in HTML?
+39. Describe the difference between innerHTML and textContent.
+40. How do you handle asynchronous code in JavaScript?
+https://www.linkedin.com/pulse/javascript-output-based-interview-questions-sanjay-kumar/
+
+https://testerops.com/javascript-interview-questions-part-2-2/
+
+
+https://www.linkedin.com/posts/arunm-engineer_most-asked-js-interview-questions-activity-7174620754347524096-Psz2/
+
+https://soniapahuja75.medium.com/interview-questions-related-to-objects-in-js-f4ca31a0f941
