@@ -1277,7 +1277,7 @@ alert( rabbit.eats ); // true
 
 
 
-# `12. Async Javascript `
+# `12. Async Javascript`
 
 ## ![tick] 12.1 What is Asynchrony/asynchronous programming in JS
 

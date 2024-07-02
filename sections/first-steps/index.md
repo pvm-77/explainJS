@@ -38,6 +38,11 @@ this statement has four expressions in it.
 a general expresion that stands alone is called an expression statement such as follows
 `b*2`;
 
+<!-- basic terminoly  -->
+
+
+
+
 4. # executing a program
 we can either run our program directly in browser console developer console or in a file and run in browser
 its upto to u either we  are writing testing code we can use nrowser console or we are writing some 
